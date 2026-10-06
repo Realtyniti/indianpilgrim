@@ -55,12 +55,15 @@ Text supports `[link](/path/)` and `**bold**`.
 - [ ] Replace terms / cancellation pages with the real booking terms
 - [ ] Re-check 2026 closing dates and 2027 opening dates against official announcements
 
-## Deploy (Vercel) and connect the Hostinger domain
+## Deploy to Hostinger (static hosting)
 
-1. Import this repository in Vercel (framework preset: Next.js, no settings needed).
-2. Vercel → Project → Settings → Domains: add `www.indianpilgrim.com` and `indianpilgrim.com` (redirect apex → www).
-3. Hostinger → Domains → indianpilgrim.com → DNS / Nameservers. Remove the parking records, then add:
-   - `A` record, name `@`, value `76.76.21.21`
-   - `CNAME` record, name `www`, value `cname.vercel-dns.com`
-   (Use the exact values Vercel shows on the Domains screen if they differ.)
-4. After DNS propagates, add the site to Google Search Console and submit `https://www.indianpilgrim.com/sitemap.xml`.
+`npm run build` writes the whole site as plain HTML to `out/` (including `.htaccess` for HTTPS, www and redirects).
+
+1. Run `npm run build`, then zip the **contents** of `out/` (not the folder itself).
+2. hPanel → Websites → indianpilgrim.com → File Manager → open `public_html`.
+3. Delete the Hostinger parking/default files (e.g. `default.php`, `index.php`), upload the zip, and **Extract** it inside `public_html`.
+   `public_html` must directly contain `index.html`, `.htaccess`, `_next/`, `char-dham-yatra/`, etc.
+4. hPanel → Security → SSL: make sure the free SSL certificate is active for `indianpilgrim.com` and `www.indianpilgrim.com`.
+5. Visit https://www.indianpilgrim.com, then add the site to Google Search Console and submit `https://www.indianpilgrim.com/sitemap.xml`.
+
+The same build also deploys unchanged to Vercel or any static host.
