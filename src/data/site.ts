@@ -18,14 +18,13 @@ export const site = {
   phoneDisplay: "+91 92504 17750",
   whatsappE164: "919250417750",
   email: "chardhamhotel.uk@gmail.com",
-  // TODO: add the office address. While null it is hidden from the site and schema.
-  address: null as null | {
-    street: string;
-    locality: string;
-    region: string;
-    postalCode: string;
-    country: string;
-  },
+  address: {
+    street: "UGF-5, Reliance Plaza, Sector 4B, Vasundhara",
+    locality: "Ghaziabad",
+    region: "Uttar Pradesh",
+    postalCode: "201012",
+    country: "IN",
+  } as null | { street: string; locality: string; region: string; postalCode: string; country: string },
   hours: "", // TODO: office hours, e.g. "Mon–Sun, 8:00 am – 9:00 pm IST"
   // TODO: add only credentials the business actually holds.
   registrations: [] as { label: string; value: string }[],
