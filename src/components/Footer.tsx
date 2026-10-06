@@ -58,15 +58,23 @@ export function Footer() {
           <Logo />
           <p className="max-w-xs text-sm text-stone-500">{site.description}</p>
           <address className="not-italic text-sm leading-relaxed text-stone-700">
-            {a.street}, {a.locality}, {a.region} {a.postalCode}
-            <br />
+            {a && (
+              <>
+                {a.street}, {a.locality}, {a.region} {a.postalCode}
+                <br />
+              </>
+            )}
             <a href={`tel:${site.phoneE164}`} className="font-semibold">
               {site.phoneDisplay}
             </a>
             <br />
             <a href={`mailto:${site.email}`}>{site.email}</a>
-            <br />
-            <span className="text-stone-500">{site.hours}</span>
+            {site.hours && (
+              <>
+                <br />
+                <span className="text-stone-500">{site.hours}</span>
+              </>
+            )}
           </address>
         </div>
         {cols.map((c) => (

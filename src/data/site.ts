@@ -13,19 +13,20 @@ export const site = {
   tagline: "Char Dham, Kedarnath and Vaishno Devi yatras, planned with care",
   description:
     "Specialist operator for Hindu pilgrimage tours in India and the Himalaya: Char Dham Yatra, Do Dham Yatra (Kedarnath and Badrinath), Vaishno Devi, Jyotirlinga, Pashupatinath and Kailash Mansarovar.",
-  // TODO: real numbers. Keep phone in E.164 for links; display separately.
-  phoneE164: "+910000000000",
-  phoneDisplay: "+91 00000 00000",
-  whatsappE164: "910000000000",
-  email: "yatra@indianpilgrim.com", // TODO: confirm mailbox exists
-  address: {
-    street: "TODO: street address",
-    locality: "Haridwar", // TODO: confirm office city
-    region: "Uttarakhand",
-    postalCode: "249401", // TODO
-    country: "IN",
+  // Phone in E.164 for links; display separately.
+  phoneE164: "+919250417750",
+  phoneDisplay: "+91 92504 17750",
+  whatsappE164: "919250417750",
+  email: "chardhamhotel.uk@gmail.com",
+  // TODO: add the office address. While null it is hidden from the site and schema.
+  address: null as null | {
+    street: string;
+    locality: string;
+    region: string;
+    postalCode: string;
+    country: string;
   },
-  hours: "Mon–Sun, 8:00 am – 9:00 pm IST",
+  hours: "", // TODO: office hours, e.g. "Mon–Sun, 8:00 am – 9:00 pm IST"
   // TODO: add only credentials the business actually holds.
   registrations: [] as { label: string; value: string }[],
   social: [] as string[], // TODO: Facebook, Instagram, YouTube profile URLs

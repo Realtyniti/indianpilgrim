@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Contact() {
   const a = site.address;
-  const mapQuery = encodeURIComponent(`${site.name}, ${a.street}, ${a.locality}, ${a.region}`);
+  const mapQuery = a && encodeURIComponent(`${site.name}, ${a.street}, ${a.locality}, ${a.region}`);
   return (
     <div className="container-x pt-6">
       <Breadcrumbs trail={[{ name: "Contact", path: "/contact/" }]} />
@@ -22,7 +22,7 @@ export default function Contact() {
           <div>
             <p className="eyebrow">Call</p>
             <a href={`tel:${site.phoneE164}`} className="font-display text-2xl text-stone-900">{site.phoneDisplay}</a>
-            <p className="text-sm text-stone-500">{site.hours}</p>
+            {site.hours && <p className="text-sm text-stone-500">{site.hours}</p>}
           </div>
           <div>
             <p className="eyebrow">WhatsApp</p>
@@ -32,6 +32,7 @@ export default function Contact() {
             <p className="eyebrow">Email</p>
             <a href={`mailto:${site.email}`} className="link">{site.email}</a>
           </div>
+          {a && (
           <div>
             <p className="eyebrow">Office</p>
             <address className="not-italic">
@@ -41,6 +42,7 @@ export default function Contact() {
             </address>
             <a href={`https://www.google.com/maps/search/?api=1&query=${mapQuery}`} target="_blank" rel="noopener" className="link text-sm">Open in Google Maps</a>
           </div>
+          )}
         </div>
         <div id="enquire" className="rounded-2xl border border-stone-200 bg-white p-6">
           <p className="font-display text-2xl text-stone-900">Send an enquiry</p>
