@@ -1,0 +1,11 @@
+# Indian Pilgrim (indianpilgrim.com)
+
+> Specialist operator for Hindu pilgrimage tours in India and the Himalaya. Priority yatras: Char Dham, Do Dham (Kedarnath and Badrinath) and Vaishno Devi.
+
+## Main pages
+- [Char Dham Yatra](https://www.indianpilgrim.com/char-dham-yatra/)
+- [Do Dham Yatra](https://www.indianpilgrim.com/do-dham-yatra/)
+- [Vaishno Devi Yatra](https://www.indianpilgrim.com/vaishno-devi-yatra/)
+- [Kedarnath Yatra](https://www.indianpilgrim.com/kedarnath-yatra/)
+- [Hindu pilgrimage tours for international travellers](https://www.indianpilgrim.com/hindu-pilgrimage-tours-india/)
+- [Yatra guides](https://www.indianpilgrim.com/guides/)
